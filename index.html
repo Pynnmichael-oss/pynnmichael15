@@ -3,124 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Fun Photo World</title>
+    <title>My Photo Gallery</title>
     <style>
-        body { 
-            font-family: 'Arial', sans-serif; 
-            margin: 0; padding: 0; 
-            background: linear-gradient(to bottom, #a1c4fd, #c2e9fb); 
-            color: #333; 
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #0f172a; /* Dark navy, similar to Anduril */
+            color: #e2e8f0; /* Light gray text */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
-        header { 
-            text-align: center; padding: 80px 20px; 
-            background: #ff9a9e; color: white; 
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #1e293b;
         }
-        h1 { font-size: 3.5em; margin: 0; text-shadow: 3px 3px #ff6b6b; }
-        .intro { font-size: 1.5em; margin: 20px 0; }
-        .about { 
-            max-width: 800px; margin: 40px auto; padding: 20px; 
-            text-align: center; background: white; border-radius: 20px; 
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+        h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin: 0;
         }
-        .gallery { 
-            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
-            gap: 20px; padding: 40px; max-width: 1400px; margin: 0 auto; 
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            flex: 1;
         }
-        .gallery img { 
-            width: 100%; height: auto; border-radius: 15px; 
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2); 
-            transition: transform 0.3s, box-shadow 0.3s; 
+        .photo-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
         }
-        .gallery img:hover { 
-            transform: scale(1.05); box-shadow: 0 15px 30px rgba(0,0,0,0.3); 
+        .photo-card:hover {
+            transform: scale(1.05);
         }
-        footer { 
-            text-align: center; padding: 30px; background: #333; color: white; 
+        .photo-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(15, 23, 42, 0.8));
+            padding: 40px 20px 20px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e293b;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 1024px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1> My Photo Adventures </h1>
-        <p class="intro">Capturing life's fun moments one snap at a time!</p>
+        <h1>Photo Gallery</h1>
     </header>
 
-    <section class="about">
-        <h2>About Me</h2>
-        <p>Hi! I'm [Your Name]. I love traveling, food, family, and everything in between. Scroll down for some of my favorite photos. 🚀</p>
-    </section>
-
     <section class="gallery">
-        <img src="images/<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Fun Photo World</title>
-    <style>
-        body { 
-            font-family: 'Arial', sans-serif; 
-            margin: 0; padding: 0; 
-            background: linear-gradient(to bottom, #a1c4fd, #c2e9fb); 
-            color: #333; 
-        }
-        header { 
-            text-align: center; padding: 80px 20px; 
-            background: #ff9a9e; color: white; 
-        }
-        h1 { font-size: 3.5em; margin: 0; text-shadow: 3px 3px #ff6b6b; }
-        .intro { font-size: 1.5em; margin: 20px 0; }
-        .about { 
-            max-width: 800px; margin: 40px auto; padding: 20px; 
-            text-align: center; background: white; border-radius: 20px; 
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
-        }
-        .gallery { 
-            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
-            gap: 20px; padding: 40px; max-width: 1400px; margin: 0 auto; 
-        }
-        .gallery img { 
-            width: 100%; height: auto; border-radius: 15px; 
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2); 
-            transition: transform 0.3s, box-shadow 0.3s; 
-        }
-        .gallery img:hover { 
-            transform: scale(1.05); box-shadow: 0 15px 30px rgba(0,0,0,0.3); 
-        }
-        footer { 
-            text-align: center; padding: 30px; background: #333; color: white; 
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1> My Photo Adventures </h1>
-        <p class="intro">Capturing life's fun moments one snap at a time!</p>
-    </header>
+        <div class="photo-card">
+            <img src="https://thumbs.dreamstime.com/b/tulsa-oklahoma-usa-downtown-city-skyline-afternoon-138286439.jpg" alt="Tulsa, OK Skyline">
+            <div class="caption">Tulsa, Oklahoma</div>
+        </div>
 
-    <section class="about">
-        <h2>About Me</h2>
-        <p>Hi! I'm [Your Name]. I love traveling, food, family, and everything in between. Scroll down for some of my favorite photos. 🚀</p>
-    </section>
+        <div class="photo-card">
+            <img src="https://images.pexels.com/photos/460621/pexels-photo-460621.jpeg" alt="Serene Nature Waterfall">
+            <div class="caption">Nature's Serenity</div>
+        </div>
 
-    <section class="gallery">
-        <img src="images/IMG_1245.JPEG" alt="Fun photo 1">
-        <img src="images/IMG_1252.JPEG" alt="Fun photo 2">
-
-        <!-- Add more <img> lines as needed -->
+        <div class="photo-card">
+            <img src="https://www.shutterstock.com/image-photo/portrait-handsome-young-gen-z-260nw-2453673529.jpg" alt="Random Portrait">
+            <div class="caption">Just a Guy</div>
+        </div>
     </section>
 
     <footer>
-        <p>Made with ❤️ on GitHub Pages | Photos coming soon via Immich!</p>
-    </footer>
-</body>
-</html>.jpg" alt="Fun photo 1">
-      
-        <!-- Add more <img> lines as needed -->
-    </section>
-
-    <footer>
-        <p>Made with ❤️ on GitHub Pages | Photos coming soon via Immich!</p>
+        &copy; 2025 My GitHub Pages Site
     </footer>
 </body>
 </html>
