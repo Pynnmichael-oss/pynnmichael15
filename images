@@ -1,2 +1,3 @@
-IMG_1245.JPEG
-IMG_1245.JPEG
+git add images/IMG_1245.JPEG
+git commit -m "Add photo"
+git push
